@@ -29,8 +29,6 @@ public class StellaMove : MonoBehaviour
         this.audio = this.gameObject.AddComponent<AudioSource>();
         this.audio.clip = this.jumpSound;
         this.audio.loop = false;
-
-
     }
 
     void Update()
@@ -69,7 +67,6 @@ public class StellaMove : MonoBehaviour
             anim.SetBool("isRun", true);
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //바닥에 닿았음을 감지하는 처리
