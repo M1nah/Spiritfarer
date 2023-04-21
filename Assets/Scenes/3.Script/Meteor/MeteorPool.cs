@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MeteorControl : MonoBehaviour //오브젝트 풀링으로 별똥별 뿌리기 
+public class MeteorPool : MonoBehaviour //오브젝트 풀링으로 별똥별 뿌리기 
 {
     //프리펩들을 보관할 변수 1
     public GameObject[] meteorPrefabs;

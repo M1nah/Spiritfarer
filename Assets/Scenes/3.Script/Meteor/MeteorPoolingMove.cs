@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DropTheMeteorMove : MonoBehaviour //별똥별 뿌리는 오브젝트 움직임 
+public class MeteorPoolingMove : MonoBehaviour //별똥별 뿌리는 오브젝트 움직임 
 {
     public float starTime;
 
