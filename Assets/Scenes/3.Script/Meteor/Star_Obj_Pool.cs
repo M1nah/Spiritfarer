@@ -47,7 +47,6 @@ public class Star_Obj_Pool : MonoBehaviour
                 time = 0;
             }
         }
-
     }
     void Spawn_Vec()
     {

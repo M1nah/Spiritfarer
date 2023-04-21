@@ -7,7 +7,6 @@ public class MeteorPoolingMove : MonoBehaviour //별똥별 뿌리는 오브젝트 움직임
     public float starTime;
 
     public float mintX, maxX;
-
     public float moveSpeed;
     
     private int sign = -1;

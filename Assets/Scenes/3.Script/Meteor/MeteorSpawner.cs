@@ -56,15 +56,13 @@ public class MeteorSpawner : MonoBehaviour
 
         time += Time.deltaTime;
 
-        if(time >= 3)
+        if(time >= 5)
         {
-
             gameObject.SetActive(false);
         }
 
         if (transform.position.y <= -35f)
         {
-
             gameObject.SetActive(false);
         }
     }
