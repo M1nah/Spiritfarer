@@ -26,7 +26,6 @@ public class MeteorPool : MonoBehaviour //오브젝트 풀링으로 별똥별 뿌리기
         GameObject select = null; //풀 안에서 놀고있는 오브젝트 하나를 '선택'해서 반환한다.
 
         //선택한 풀의 놀고 있는(비활성화 된) 게임 오브젝트 접근
-
         foreach(GameObject item in meteorPools[index])
         {
             if (!item.activeSelf) //내용물 오브젝트가(item) 비활성화(대기 상태)인지 확인

@@ -24,8 +24,9 @@ public class MeteorControl : MonoBehaviour
         }
     }
 
-    void Spawn()
+    public void Spawn()
     {
+      Debug.Log("별똥별나오니?");
       GameManager.instance.pool.Get(0);
     }
 
