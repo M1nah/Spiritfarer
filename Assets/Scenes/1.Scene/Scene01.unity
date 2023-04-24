@@ -360,8 +360,8 @@ GameObject:
   m_Component:
   - component: {fileID: 81437994}
   - component: {fileID: 81437993}
-  - component: {fileID: 81437992}
   - component: {fileID: 81437995}
+  - component: {fileID: 81437992}
   m_Layer: 0
   m_Name: npcGiovanni
   m_TagString: Untagged
@@ -383,6 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialoguePanel: {fileID: 1006090435}
   DialogueText: {fileID: 1185352200}
+  sceneMove: {fileID: 1357281920}
   dialogue:
   - "\uD14C\uC2A4\uD2B8\uC911 \uC544\uC544 \uD14C\uC2A4\uD2B8\uC911"
   - "\uC5B4\uB54C? \uC798 \uCD9C\uB825\uB418\uACE0\uC788\uC9C0?"
@@ -1361,8 +1362,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1176166983
-  m_SortingLayer: 3
+  m_SortingLayerID: 1521719135
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ad431d90c36259458f1448492ee36bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1709,7 +1710,10 @@ GameObject:
   - component: {fileID: 280391588}
   - component: {fileID: 280391587}
   - component: {fileID: 280391586}
-  m_Layer: 0
+  - component: {fileID: 280391590}
+  - component: {fileID: 280391589}
+  - component: {fileID: 280391591}
+  m_Layer: 10
   m_Name: Daffodil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1800,6 +1804,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &280391589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280391585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d7fd52f6a8de4469c35cb1d1a065ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  distance: 3
+  teleportDistance: 8
+  jumpPower: 5
+  flatformLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  airstepLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!58 &280391590
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280391585}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.46
+--- !u!50 &280391591
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280391585}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 8
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &286804065
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,8 +6059,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1514979
-  m_SortingLayer: 2
+  m_SortingLayerID: 1176166983
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: af9993bb7c354814c87570ad9a9a5994, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6984,8 +7047,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1514979
-  m_SortingLayer: 2
+  m_SortingLayerID: 1176166983
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 763a78e140872844aa3a51ca0aa2cca7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8122,6 +8185,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1357281919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357281921}
+  - component: {fileID: 1357281920}
+  m_Layer: 0
+  m_Name: sceneMoveButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1357281920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357281919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f83f0e286f082448659da4fef08aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1357281921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357281919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.71, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361343553
 GameObject:
   m_ObjectHideFlags: 0
@@ -10053,6 +10159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialoguePanel: {fileID: 1596265192}
   DialogueText: {fileID: 1852529133}
+  sceneMove: {fileID: 1357281920}
   dialogue:
   - "\uC2A4\uD154\uB77C! \uC640\uC92C\uAD6C\uB098!"
   - "\uBC18\uAC00\uC6CC! \uC774\uC81C \uBB50\uD560\uAC70\uC57C?"
@@ -11201,7 +11308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1799832957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12152,8 +12259,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -526213057
-  m_SortingLayer: 1
+  m_SortingLayerID: -1514979
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8f07a0af7d03b39418eff37aefb30ec7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13215,6 +13322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialoguePanel: {fileID: 241025391}
   DialogueText: {fileID: 96337856}
+  sceneMove: {fileID: 0}
   dialogue:
   - "\uC624, \uC2A4\uD154\uB77C!"
   - "\uB9CC\uB098\uC11C \uBC18\uAC11\uAD6C\uB098."

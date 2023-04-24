@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ButtonEvnet : MonoBehaviour
 {
-  public void StartButton()
+  public void StartButton(string name)
     {
         //if(Input.GetMouseButtonDown(0))
-        SceneManager.LoadScene("Scene01");
+        SceneManager.LoadScene(name);
     }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1.Scene/Scene01.unity
     guid: 87dd1e9b4ef4de4448dc133453e13eb6
+  - enabled: 1
+    path: Assets/Scenes/1.Scene/GiovanniEventScene.unity
+    guid: ef8c0043e7c2fa84e8b9bea326f6d045
   m_configObjects: {}
