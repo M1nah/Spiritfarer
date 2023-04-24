@@ -9,7 +9,10 @@ public class MeteorSpawner : MonoBehaviour
     Star_Obj_Pool star_Parent;
 
     [SerializeField] GameObject meteor;
-    
+    static AudioSource audioSource;
+    public AudioClip audioclip;
+
+
     [SerializeField] Rigidbody2D rdb;
     public int scoreCount;
 
@@ -29,12 +32,15 @@ public class MeteorSpawner : MonoBehaviour
     private void Start()
     {
         rdb = gameObject.GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        //audioclip = Resources.Load<AudioClip>("SFX_Event_Meteor_Impact_06.wav");
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
         {
-            scoreCount++;//별똥별에 닿았을때 점수카운트가 올라가게
+            GameManager.instance.Addscore(30);//별똥별에 닿았을때 점수카운트가 올라가게
+            // audioSource.PlayOneShot(audioclip);
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }
@@ -56,7 +62,7 @@ public class MeteorSpawner : MonoBehaviour
 
         time += Time.deltaTime;
 
-        if(time >= 5)
+        if(time >= 10)
         {
             gameObject.SetActive(false);
         }
@@ -66,7 +72,4 @@ public class MeteorSpawner : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
-    //에어스텝 랜덤 떨구기..
-
 }

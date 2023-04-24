@@ -71,7 +71,7 @@ public class npcDialogue : MonoBehaviour
             sceneMove.StartButton("GiovanniEventScene");
             return;
         }
-        if (dialogue[4] == "다시한번해보자" && num == 4) //3줄 이상 안넘어감...일단 네줄로 늘려...
+        if (dialogue[4] == "낮으로 데려다줄테니까." && num == 4) 
         {
             sceneMove.StartButton("Scene01"); 
             return;
@@ -82,7 +82,6 @@ public class npcDialogue : MonoBehaviour
             sceneMove.StartButton("Intro");
             return;
         }
-
 
         num++; 
 

@@ -20,11 +20,15 @@ public class StellaMove : MonoBehaviour
     private AudioSource audio;
     public AudioClip jumpSound;
 
+    static AudioSource audioSource;
+    public AudioClip audioclip;
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>(); 
         spriteRenderer = GetComponent<SpriteRenderer>(); 
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         this.audio = this.gameObject.AddComponent<AudioSource>();
         this.audio.clip = this.jumpSound;
@@ -33,18 +37,14 @@ public class StellaMove : MonoBehaviour
 
     void Update()
     {
-        //버튼에서 손을 떼는 등의 단발적인 키보드 입력은 FixedUpdate보다 Update에 쓰는게 키보드 입력이 누락될 확률이 낮아진다
         //stop speed
-        if (Input.GetButtonUp("Horizontal")) //버튼에서 손을 떼는 경우
+        if (Input.GetButtonUp("Horizontal")) 
         {
-            //nomalized : 백터 크기를 1로 만드는 상태 (단위백터 : 크 기가 1 인 백터)
-            //백터는 방향과 크기를 동시에 가지는데 크기(-왼,+오)를 구별하기 위해 단위백터(1,-1)로 방향을 알 수 있도록 단위벡터를 곱함
             rigidbody2D.velocity = new Vector2(0.5f * rigidbody2D.velocity.normalized.x, rigidbody2D.velocity.y);
         }
 
-        //방향전환은 물리현상이 아니므로 Update에 넣어야한다
         //DirectionSprite
-        if (Input.GetButtonDown("Horizontal")) spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1; //-1 (왼쪽이면, flipX  true (체크))
+        if (Input.GetButtonDown("Horizontal")) spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1; 
 
         //버튼에서 손을 떼는 단발적인 키보드 입력은 FixedUpdate보다 Update에 쓰는게 키보드 입력이 누락될 확률이 낮아진다
         //Jump
@@ -91,6 +91,10 @@ public class StellaMove : MonoBehaviour
         if (collision.CompareTag("Ladder"))
         {
             isLadder = true;
+        }
+        if (collision.tag == "ShootingStar")
+        {
+            audioSource.PlayOneShot(audioclip);
         }
     }
 
