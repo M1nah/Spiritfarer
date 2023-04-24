@@ -385,12 +385,12 @@ MonoBehaviour:
   DialogueText: {fileID: 1185352200}
   sceneMove: {fileID: 1357281920}
   dialogue:
-  - "\uD14C\uC2A4\uD2B8\uC911 \uC544\uC544 \uD14C\uC2A4\uD2B8\uC911"
-  - "\uC5B4\uB54C? \uC798 \uCD9C\uB825\uB418\uACE0\uC788\uC9C0?"
-  - "\uC5EC\uAE30\uC11C\uB294 \uD018\uC2A4\uD2B8\uB97C \uAD6C\uD604\uD574\uBCFC\uAC70\uC57C"
-  - "\uC2A4\uD154\uB77C \uB124\uAC00 \uC218\uB77D\uC744 \uB204\uB978\uB2E4\uBA74 "
-  - "\uC52C\uC804\uD658\uC73C\uB85C \uC2A4\uD14C\uC774\uC9C0\uAC00 \uB118\uC5B4\uAC00\uAC8C
-    \uB420\uAC70\uC57C! "
+  - "\uC74C... \uC5EC\uAE30\uAD6C\uB098, \uC2A4\uD154\uB77C."
+  - "\uC5C4\uCCAD \uC2E0\uC774 \uB09C\uB2E4\uACE0 \uD558\uAE30\uB294 \uC5B4\uB835\uC9C0\uB9CC..."
+  - "\uAC00\uB294 \uAC8C \uB9DE\uACA0\uC9C0."
+  - "\uB0A0 \uB370\uB824\uB2E4\uC904 \uC900\uBE44\uB294 \uB410\uC5B4?"
+  - "\uADF8\uB798, \uC774\uAC8C \uCD5C\uC120\uC758 \uACB0\uC815\uC778 \uAC83 \uAC19\uC544."
+  - "\uC790, \uAC00\uC790. \uBCC4\uB625\uBCC4\uC744 \uBCF4\uB7EC."
   continueButton: {fileID: 1799832956}
   wordSpeed: 0.07
   StellaIsClose: 0
@@ -9772,6 +9772,7 @@ MonoBehaviour:
   maxSpeed: 15
   Jump: 25
   jumpSound: {fileID: 8300000, guid: 02380ac2e05d0b04fb12e7ff35e58149, type: 3}
+  audioclip: {fileID: 0}
 --- !u!95 &1576636763
 Animator:
   serializedVersion: 3

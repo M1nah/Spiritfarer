@@ -66,7 +66,7 @@ public class npcDialogue : MonoBehaviour
     string sceneName;
     public void NextLine()
     {
-        if (dialogue[4] == "씬전환으로 스테이지가 넘어가게 될거야! "&&num==4)
+        if (dialogue[5] == "자, 가자. 별똥별을 보러." && num==5)
         {
             sceneMove.StartButton("GiovanniEventScene");
             return;
