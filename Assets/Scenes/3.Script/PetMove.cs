@@ -62,10 +62,6 @@ public class PetMove : MonoBehaviour
         }
     }
 
-    void PetIsRun()
-    {
-
-    }
 
     float DirectionPet()
     {

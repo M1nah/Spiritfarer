@@ -62,3 +62,6 @@ TagManager:
   - name: front2
     uniqueID: 1820890757
     locked: 0
+  - name: cover
+    uniqueID: 1375819493
+    locked: 0

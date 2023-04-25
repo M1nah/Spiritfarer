@@ -66,25 +66,27 @@ public class npcDialogue : MonoBehaviour
     string sceneName;
     public void NextLine()
     {
-        if (dialogue[5] == "자, 가자. 별똥별을 보러." && num==5)
+        if (dialogue[dialogue.Length-1] == "이제 가자. 별똥별을 보러." && num==18)
         {
             sceneMove.StartButton("GiovanniEventScene");
+            num = 0;
             return;
         }
-        if (dialogue[4] == "낮으로 데려다줄테니까." && num == 4) 
+        if (dialogue[dialogue.Length-1] == "챠오, 벨라." && num == 17) 
         {
-            sceneMove.StartButton("Scene01"); 
+            sceneMove.StartButton("Ending");
+            num = 0;
             return;
         }
 
-        if (dialogue[4] == "바로 컨티뉴 버튼에 온클릭 연결을 안했기 때문이지!" && num==4) 
+        if (dialogue[dialogue.Length-1] == "넌 그런 영혼을 갖고 있단다." && num==9) 
         {
             sceneMove.StartButton("Intro");
+            num = 0;
             return;
         }
 
         num++; 
-
         continueButton.SetActive(false);
 
         if(index < dialogue.Length - 1)
