@@ -21,7 +21,7 @@ public class EndingBoatove : MonoBehaviour
     {
         if (collision.tag == "Ground")
         {
-            rigidbody.velocity = Vector3.zero;
+            //rigidbody.velocity = Vector3.zero;
             boatSpeed = 0;
         }
     }
